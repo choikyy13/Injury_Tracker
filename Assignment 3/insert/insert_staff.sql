@@ -1,0 +1,22 @@
+INSERT INTO Staff (Staff_id, Staff_name, Year_join) VALUES
+('S001', 'Dr. Emma Watson', 2015),
+('S002', 'Dr. Daniel Liu', 2012),
+('S003', 'Dr. Olivia Carter', 2016),
+('S004', 'Dr. Ethan Brooks', 2018),
+('S005', 'Dr. Ava Patel', 2014),
+('S006', 'Dr. Noah Smith', 2017),
+('S007', 'Dr. Mia Johnson', 2019),
+('S008', 'Dr. Lucas White', 2013),
+('S009', 'Dr. Sophia Green', 2020),
+('S010', 'Dr. Liam Brown', 2021),
+
+('S011', 'Coach William Scott', 2011),
+('S012', 'Coach Emily Davis', 2015),
+('S013', 'Coach Benjamin Lee', 2017),
+('S014', 'Coach Isabella Garcia', 2013),
+('S015', 'Coach Michael Anderson', 2018),
+('S016', 'Coach Harper Thompson', 2022),
+('S017', 'Coach Alexander Hall', 2010),
+('S018', 'Coach Charlotte Young', 2014),
+('S019', 'Coach Henry King', 2020),
+('S020', 'Coach Ella Nelson', 2023);
