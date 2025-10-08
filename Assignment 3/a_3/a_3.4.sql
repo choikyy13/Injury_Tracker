@@ -15,7 +15,7 @@ long_term_injury_id AS(
 SELECT DISTINCT it.Body_part, COUNT(*) AS Ended_Carrer
 FROM Injury_Type it
 JOIN long_term_injury_id lid
-    ON it.Injury_id = lid.Injury_id;
-GROUP BY it.Body_part
+    ON it.Injury_id = lid.Injury_id
+GROUP BY it.Body_part;
 
 

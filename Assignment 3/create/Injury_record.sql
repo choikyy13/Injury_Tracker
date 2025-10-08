@@ -8,4 +8,4 @@ CREATE TABLE Injury_record (
 	FOREIGN KEY (STAFF_in_Charge ) REFERENCES Staff(Staff_id) ,
 	FOREIGN KEY (Athlete_id) REFERENCES Athlete(Athlete_id), 
 	FOREIGN KEY (Injury_id) REFERENCES Injury_Type(Injury_id)
-) 
+) ;
