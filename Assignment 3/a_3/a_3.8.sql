@@ -1,6 +1,5 @@
--- Show which short term injury is most
+-- shows the number of short-term injuries that athletes suffer from
 SELECT st.Treatment
 FROM Short_term st
 GROUP BY st.Treatment
-ORDER BY COUNT(*) DESC
-LIMIT 1;
+ORDER BY COUNT(*) DESC;

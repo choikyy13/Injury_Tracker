@@ -1,4 +1,4 @@
--- Select which team has the most long_term injured people
+-- shows the team with the most number of athletes having long term injury record
 SELECT t.Team_name, COUNT(DISTINCT ir.Athlete_id) AS people_with_injury
 FROM Long_term lt
 JOIN Injury_record ir ON ir.Record_id = lt.Record_id
