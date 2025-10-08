@@ -1,4 +1,4 @@
---create a list of which body part injury caused the most career-ending injury
+-- create a list of which body part injury caused the most career-ending injury
 
 WITH career_availability AS (
     SELECT lt.Record_id

@@ -3,4 +3,4 @@ CREATE TABLE Medical_team (
 	Specialization char(40), 
 	Licence_number char(30), 
 	FOREIGN KEY(Staff_id) REFERENCES Staff(Staff_id) 
-) 
+) ;

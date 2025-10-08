@@ -1,4 +1,3 @@
-
 INSERT INTO Athlete (Athlete_id, Athlete_name, Date_of_Birth, ContactNO, Team_id) VALUES
 ('A001', 'Liam Johnson', '1998-04-22', '6011234567', 'T001'),
 ('A002', 'Olivia Brown', '2001-09-15', '6011234568', 'T002'),

@@ -4,4 +4,4 @@ CREATE TABLE Professional (
 	Staff_id char(5),
 	FOREIGN KEY (Staff_id) REFERENCES Staff(Staff_id), 
 	FOREIGN KEY(User_id) REFERENCES Users(User_id) 
-) 
+) ;

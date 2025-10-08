@@ -1,4 +1,4 @@
---creates the amount of public users
+-- creates the amount of public users
 SELECT COUNT(*) AS Public_User_Count
 FROM Users u 
 JOIN Public p
