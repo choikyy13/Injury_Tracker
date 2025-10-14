@@ -3,133 +3,226 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Karla', sans-serif;
-}
+  font-family: 'Karla';         /*set font style to Karla*/
+} 
+
+
+/*body settings*/
 body{
-  color: #fff;
-}
-.container{
-  width: 100%;
-  height: 100vh;
-  background-image: url('img/back.jpg');
-  background-position: center;
-  background-size: cover;
-  padding-top: 35px;
-  padding-left: 8%;
-  padding-right: 8%;
-}
-nav{
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.logo a{
-  font-size: 40px;
-  text-decoration: none;
-}
-span{
-  color: #494c4d;
-}
-nav ul li{
-  display: inline-block;
-  list-style: none;
-  margin: 10px 15px;
-}
-nav ul li a{
-  text-decoration: none;
-  transition: 0.5s;
-}
-nav ul li a:hover{
-  color: #f9004d;
-}
-.login{
-  text-decoration: none;
-  margin-right: 15px;
-  font-size: 18px;
-}
-.btn{
-  background: #000;
-  border-radius: 6px;
-  padding: 9px 25px;
-  text-decoration: none;
-  transition: 0.5s;
-  font-size: 18px;
+  color: #000000;
 }
 
-.content{
-  margin-top: 10%;
-  max-width: 600px;
-}
-.content h2{
-  font-size: 60px
-}
-.content p{
-  margin-top: 10px;
-  line-height: 25px;
-}
+/*default font colour*/
 a{
-  color: #fff;
+  color: #3d3d3d;
 }
-.link {
-  margin-top: 30px;
+
+/*default colour*/
+span{
+  color: #292929;
 }
-.getstart{
-  color: #000;
-  text-decoration: none;
-  background: #fff;
-  padding: 9px 25px;
-  font-weight: bold;
-  border-radius: 6px;
+
+/*full page background*/
+.container{
+  width: 100%;                                  /*full screen*/
+  min-height: 100vh;                               /*full screen*/
+  background-image: url('img/back.jpg');
+  background-position: center;                  /*center the background image*/
+  background-size: cover;                        /*image cover whole container*/
+  padding-top: 30px;                            /*margin spaces between the top */
+  padding-left:8%;                              /*margin spaces between the left */
+  padding-right: 8%;                            /*margin spaces between the right */
+  display: flex;               /* use flex layout */
+  flex-direction: column;      /* stack children vertically */
+  min-height: 100vh;           /* full viewport height */
+  font-size: 30px;
+}
+
+
+/*navigation bar settings*/
+nav{
+  padding: 10px 10px;                          /*adjust spaces*/
+  display: flex;                                /*align horizontally */
+  align-items: center;                          /*align vertically center */
+  justify-content: space-between;               /* logo left, menu center, buttons right */
+}
+
+
+/* logo settings */
+.logo a {
+  display: flex;              /*align horizontally */
+  align-items: center;        /*align vertically center */
+  text-decoration: none;       /*remove underline*/
+  gap: 5px;                  /*added space between the logo and the word InjuryTracker*/
+}
+
+/*logo image settings*/
+.logo-img {
+  width: 80px;            
+  height: 80px;
+  object-fit: contain;          
+  mix-blend-mode: multiply;    /* deleting the white background*/
+}
+
+/*"InjuryTracker" font settings*/
+.logo-text {
+  font-size: 40px;         
+  font-weight: 600;           /*bold*/
+  color: #2e476d;           
+}
+
+
+
+
+/*navigation menu*/
+nav ul li{
+  display: inline-block;            /*align horizontally */
+  list-style: none;                 /*delete bullet points*/
+  margin: 10px 15px;                /*margin settings*/
+}
+
+/*navigation menu links*/
+nav ul li a{
+  text-decoration: none;             /*remove underline*/
+  transition: 0.5s;                   /*transition when hovering*/
+}
+
+/*when hovering the link in nav*/
+nav ul li a:hover{
+  color: #f9004d;                    /*change colour when hovering*/
+}
+
+
+/*login settings*/
+.login {
+  text-decoration: none;                /*remove underline*/
+  margin-right: 15px;                 
+  font-size: 20px;  
+}
+
+
+/*register settings*/
+.register{
+  background: #2e476d;
+  border-radius: 6px;                     /*round corner*/
+  padding: 9px 25px;                       /*margin inside the button*/
+  text-decoration: none;                /*remove underline*/
+  font-size: 20px;
+  color: #ffffff;
   transition: 0.5s;
+
 }
-.link .getstart:hover{
+
+/*styling after hover the register button*/
+.register:hover{
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
 }
 
 
+/*content below navigation section*/
+.content{
+  margin-top: 5%;                       
+  max-width: 1000px;                    /*width of the text*/
+}
+
+/*header 3 default settings for content*/
+.content h3{
+  font-size: 35px
+}
+
+/*paragph default settings for content*/
+.content p{
+  margin-top: 10px ;                     /*margin top*/
+  margin-left: 30px;
+  line-height: 25px;                    /*line spacing*/
+}  
+
+
+/*start butten position settings*/
+.start {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+/*start button styling settings*/
+.getstart{
+  color: #000;
+  text-decoration: none;
+  background: #fff;
+  padding: 12px 25px;                 /*size of the button box*/
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+/*start button effect when hovering*/
+.start .getstart:hover{
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+
+/* About section */
+.about {
+  margin-top: auto;   
+  margin-left: 50px;
+  max-width: 1000px;      /* width of the text block */
+  line-height: 1.6;        /* more readable spacing */
+  color: #2e476d;          /* dark blue text */
+  font-size: 23px;         /* comfortable font size */
+  font-weight: 450;           /*bold*/
+
+}
+
+.about h3 {
+  font-size: 32px;         /* heading size */
+  margin-bottom: 20px;     /* space below heading */
+}
+
+.about p {
+  margin-bottom: 15px;     /* space between paragraphs */
+}
+
+.about ul li {
+  list-style: none;        /* remove bullet points if using lists */
+}
+
+
+/*footer settings*/
 footer {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #ccc;
-  text-align: center;
-  padding: 30px 5%;
+  background-color: rgba(61, 61, 61, 0.8);
+  color: #ccc;                                /*font colour*/
+  text-align: center;                           /*horizontally center*/
+  padding: 30px 5%;                             /* size of the footer */
   font-size: 14px;
   line-height: 1.6;
-  margin-top: 40px;
 }
 
+/*container inside footer*/
 .footer-container {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 900px;                                   /*the width of the content box inside footer*/
+  margin: 0 auto;                           /*horizontally center*/
 }
 
+/*links*/
 .footer-links {
   margin: 10px 0;
 }
 
+/*links style*/
 .footer-links a {
   color: #00b8a9;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+  text-decoration: none;                     /*remove underline*/
+  transition: color 0.5s;
 }
 
+/*link effect when hovering*/
 .footer-links a:hover {
   color: #f9004d;
 }
 
-footer .disclaimer {
-  color: #999;
-  font-size: 13px;
-  margin-top: 20px;
-  line-height: 1.5;
-}
-
-
-.light-page {
-  color: #000; 
-}
 
 
