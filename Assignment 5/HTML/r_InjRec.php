@@ -25,9 +25,9 @@
       <!--middle-->
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="stat.html">Stat</a></li>
-        <li><a href="reports.html">Reports</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Stat</a></li>
+        <li><a href="#">Reports</a></li>
         <li><a href="maintenance.html">maintenance</a></li>
       </ul>
 
@@ -45,7 +45,7 @@
 
 
     <?php
-      $conn = new mysqli("localhost", "root", "password", "injury Tracker");
+      $conn = new mysqli("localhost", "root", "Tt1609t", "injury Tracker");
 
       if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
@@ -88,20 +88,21 @@
 
 
   </div>
+
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Injury Tracker | Database Project</p>
+
+      <p class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="news.html">News</a> |
+        <a href="history.html">History</a>|
+        <a href="reports.html">Reports</a> |
+        <a href="imprint.html">Imprint</a>
+      </p>
+
+    </div>
+  </footer>
 </body>
-
-<footer>
-  <div class="footer-container">
-    <p>&copy; 2025 Injury Tracker | Database Project</p>
-
-    <p class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="news.html">News</a> |
-      <a href="history.html">History</a>|
-      <a href="reports.html">Reports</a> |
-      <a href="imprint.html">Imprint</a>
-    </p>
-
-  </div>
-</footer>
 </html>

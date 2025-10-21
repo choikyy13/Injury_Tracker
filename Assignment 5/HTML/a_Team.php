@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
   <!--navigation bar-->
   <div class="container">
     <nav>
@@ -25,9 +24,9 @@
       <!--middle-->
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="stat.html">Stat</a></li>
-        <li><a href="reports.html">Reports</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Stat</a></li>
+        <li><a href="#">Reports</a></li>
         <li><a href="maintenance.html">maintenance</a></li>
       </ul>
 
@@ -42,54 +41,38 @@
         <a href="#" class="register">Register</a>
       </div>
     </nav>
+
+
+    <h2>Team Input Form</h2>
+    <br>
+    <form action="r_Team.php" method="post">
+      <label for="Team_name">Team Name : </label>
+      <input type = "text" name = "Team_name" required placeholder="Enter the Team name">
+      <br>
+
+      <label for="country">Country: </label>
+      <input type = "text" name = "Staff_name" required placeholder="Enter the country">
+
+      
+      <br><br>
+      <input type = "submit" value="Submit Form" />
+    </form>
+
+    <a href="maintenance.html">Back to Maintenance Page</a>
   </div>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Injury Tracker | Database Project</p>
 
+      <p class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="news.html">News</a> |
+        <a href="history.html">History</a>|
+        <a href="reports.html">Reports</a> |
+        <a href="imprint.html">Imprint</a>
+      </p>
 
-
-
-  <?php
-    $user = "root";
-    $password = "password";
-    $database = "InjuryTracker";
-    $table = "Team";
-    $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-    echo "connect db";
-  ?>
-
-  <form action="r_Team.php" method="post">
-    Team Name : <input type = "text" name = "Team_name" required placeholder="Enter the Team's name">
-    <br>
-    
-    Team ID   : <input type = "text" name = "Team_id" required placeholder="Enter the Team's name, e.g. T0001">
-    <br>
-
-    Country: <input type = "text" name = "country" required placeholder="Enter the Team's country">
-    <br>
-    
-    <br><br>
-    <input type = "submit" value="Submit Form" />
-  </form>
-
-
-
-
-  
-
+    </div>
+  </footer>
 </body>
-
-<footer>
-  <div class="footer-container">
-    <p>&copy; 2025 Injury Tracker | Database Project</p>
-
-    <p class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="news.html">News</a> |
-      <a href="history.html">History</a>|
-      <a href="reports.html">Reports</a> |
-      <a href="imprint.html">Imprint</a>
-    </p>
-
-  </div>
-</footer>
-
 </html>

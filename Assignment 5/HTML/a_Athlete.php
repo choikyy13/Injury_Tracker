@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
   <!--navigation bar-->
   <div class="container">
     <nav>
@@ -25,9 +24,9 @@
       <!--middle-->
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="stat.html">Stat</a></li>
-        <li><a href="reports.html">Reports</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Stat</a></li>
+        <li><a href="#">Reports</a></li>
         <li><a href="maintenance.html">maintenance</a></li>
       </ul>
 
@@ -45,65 +44,66 @@
 
 
 
-  <h2>Injury Record Input Form</h2>
-  <br>
-  <form action="r_Athlete.php" method="post">
-
-    <label for="Athlete_name">Athlete name:</label>
-    <input type = "text" name = "Athlete_name" required placeholder="Enter the Athlete's name">
+    <h2>Athlete Input Form</h2>
     <br>
-    
+    <form action="r_Athlete.php" method="post">
 
-    <label for="Date_of_Birth">Date of Birth:</label>
-    <input type = "date" name = "Date_of_Birth" />
-    <br>
+      <label for="Athlete_name">Athlete name:</label>
+      <input type = "text" name = "Athlete_name" required placeholder="Enter the Athlete's name">
+      <br>
+      
 
-    <label for="ContactNO">Contact number:</label>
-    <input type = "text" name = "ContactNO" placeholder="Enter contact number">
-    <br>
+      <label for="Date_of_Birth">Date of Birth:</label>
+      <input type = "date" name = "Date_of_Birth" />
+      <br>
 
-    <label for="Team_id">Team ID :</label>
-    <select name= "Team_id">     <!-- drop downbox-->
-      <?php
-        $conn = new mysqli("localhost", "root", "password", "injury Tracker");
+      <label for="ContactNO">Contact number:</label>
+      <input type = "text" name = "ContactNO" placeholder="Enter contact number">
+      <br>
 
-        if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-        }
+      <label for="Team_id">Team ID :</label>
+      <select name= "Team_id">     <!-- dropdownbox-->
+        <?php
+          $conn = new mysqli("localhost", "root", "Tt1609t", "injury Tracker");
 
-        $sql = "SELECT * FROM Team";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-          while($row = $result->fetch_assoc()) {
-            echo "<option value='" . $row['Team_id'] ."'>" .$row['Team_id'] ." - ".$row['Team_name'] ."</option>";
+          if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
           }
-        }
-        $conn->close();
-      ?>
-    </select> 
-    <br>
 
-    <br><br>
-    <input type = "submit" value="Submit Form" />
-  </form>
+          $sql = "SELECT * FROM Team";
+          $result = $conn->query($sql);
+
+          if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+              echo "<option value='" . $row['Team_id'] ."'>" .$row['Team_id'] ." - ".$row['Team_name'] ."</option>";
+            }
+          }
+          $conn->close();
+        ?>
+      </select> 
+      <br>
+
+      <br><br>
+      <input type = "submit" value="Submit Form" />
+    </form>
+    <a href="maintenance.html">Back to Maintenance Page</a>
 
   </div>
+
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Injury Tracker | Database Project</p>
+
+      <p class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="news.html">News</a> |
+        <a href="history.html">History</a>|
+        <a href="reports.html">Reports</a> |
+        <a href="imprint.html">Imprint</a>
+      </p>
+
+    </div>
+  </footer> 
 </body>
-
-<footer>
-  <div class="footer-container">
-    <p>&copy; 2025 Injury Tracker | Database Project</p>
-
-    <p class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="news.html">News</a> |
-      <a href="history.html">History</a>|
-      <a href="reports.html">Reports</a> |
-      <a href="imprint.html">Imprint</a>
-    </p>
-
-  </div>
-</footer>
-
 </html>

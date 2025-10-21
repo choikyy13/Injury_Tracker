@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Record Input | Injury Tracker</title>
+    <title>Med Staff Record Input | Injury Tracker</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 
 <body>
-
-
   <!--navigation bar-->
   <div class="container">
     <nav>
@@ -26,9 +24,9 @@
       <!--middle-->
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="stat.html">Stat</a></li>
-        <li><a href="reports.html">Reports</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Stat</a></li>
+        <li><a href="#">Reports</a></li>
         <li><a href="maintenance.html">maintenance</a></li>
       </ul>
 
@@ -46,7 +44,7 @@
 
 
     <?php
-      $conn = new mysqli("localhost", "root", "password", "injury Tracker");
+      $conn = new mysqli("localhost", "root", "Tt1609t", "injury Tracker");
 
       if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -61,8 +59,8 @@
 
 
       if ($stmt->execute()) {
-        echo "<h3>Med Staff added successfully!</h3><br>";
-        echo "<p>Staff ID: <strong>" . $next_id . "</strong></p><br>";
+        echo "<h3>Med Staff info added successfully!</h3><br>";
+        echo "<p>Staff ID: <strong>" . $Staff_id . "</strong></p><br>";
         echo '<a href="a_MedTeam.php">Back to Input Form</a><br>';
         echo '<a href="maintenance.html">Back to Maintenance Page</a>';
       } else {
@@ -75,19 +73,20 @@
 
 
   </div>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Injury Tracker | Database Project</p>
+
+      <p class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="news.html">News</a> |
+        <a href="history.html">History</a>|
+        <a href="reports.html">Reports</a> |
+        <a href="imprint.html">Imprint</a>
+      </p>
+
+    </div>
+  </footer>
 </body>
-<footer>
-  <div class="footer-container">
-    <p>&copy; 2025 Injury Tracker | Database Project</p>
-
-    <p class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="news.html">News</a> |
-      <a href="history.html">History</a>|
-      <a href="reports.html">Reports</a> |
-      <a href="imprint.html">Imprint</a>
-    </p>
-
-  </div>
-</footer>
 </html>
