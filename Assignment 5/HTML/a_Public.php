@@ -65,7 +65,25 @@
         <label for="Interest">Interest: </label>
         <input type="text" id="Interest" name="Interest" required>
         <br>
+        <label for="Team_name">Supporting Team: </label>
+        <select name="Team_name" id="Team_name" required>
+          <?php
+            include("db_connect.php");
+            $sql = "SELECT Team_name FROM Team";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+              while ($row = $result->fetch_assoc()) {
+                  echo "<option value='" . $row['Team_name'] . "'>" . $row['Team_name'] . "</option>";
+              }
+            }
+            $conn->close();
+          ?>
+        </select> 
+        <br>
         <input type="submit" value="Create Public User">
+
+
     </form>
 
 

@@ -45,36 +45,55 @@
 
 
         <?php
-      include 'db_connect.php';
+        include 'db_connect.php';
+        if($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $User_name = $_POST['User_name'];
+            $Interest = $_POST['Interest'];
+            $Team_name = $_POST['Team_name'];
 
-      $result = $conn->query("SELECT MAX(Staff_id) AS max_id FROM Staff");
-      $row = $result->fetch_assoc();
-      $max_id = $row['max_id'];
+            $result1 = $conn->prepare('SELECT User_id FROM Users WHERE User_name = ?');
+            $result1->bind_param('s', $User_name);
+            $result1->execute();
+            $result_1 = $result1->get_result();
 
-      if ($max_id) {
-        $num = (int)substr($max_id, 1);
-        $next_id = 'S' . str_pad($num + 1, 3, '0', STR_PAD_LEFT);
-      } else {
-        $next_id = 'S001';
-      }
+            if($row = $result_1->fetch_assoc()) {
+                $User_id = $row['User_id'];
+            }
+            else {
+                die ('No User');
+            }
 
-      $Staff_name = $_POST['Staff_name'];
-      $Year_join  = $_POST['Year_join'];
+            $result1->close();
 
-      $stmt = $conn->prepare("INSERT INTO Staff (Staff_id, Staff_name, Year_join) VALUES (?, ?, ?)");
-      $stmt->bind_param("sss", $next_id,$Staff_name,$Year_join );
+            $result2 = $conn->prepare("SELECT Team_id FROM Team WHERE Team_name = ?");
+            $result2->bind_param("s", $Team_name);
+            $result2->execute();
+            $result_2 = $result2->get_result();
 
-      if ($stmt->execute()) {
-        echo "<h3>Staff added successfully!</h3><br>";
-        echo "<p>Staff ID: <strong>" . $next_id . "</strong></p><br>";
-        echo '<a href="a_Staff.php">Back to Input Form</a><br>';
-        echo '<a href="maintenance.html">Back to Maintenance Page</a>';
-      } else {
-        echo "<h3>Error: " . $stmt->error . "</h3>";
-      }
+            if ($row2 = $result_2->fetch_assoc()) {
+                $Team_supporting = $row2['Team_id'];
+            } else {
+                die("No team with that name.");
+            }
+            $result2->close();
 
-      $stmt->close();
-      $conn->close();
+            $stmt = $conn->prepare('INSERT INTO Public (User_id, Interest, Team_supporting) VALUES (?,?,?)');
+            $stmt->bind_param('sss', $User_id, $Interest, $Team_supporting);
+
+            if ($stmt->execute()) {
+                echo '<h3>Public User added successfully!</h3><br>';
+                echo "<p>User name: <strong>" . $User_name . "</strong></p><br>";
+                echo '<a href="a_Public.php">Back to Input Form</a><br>';
+                echo '<a href="maintenance.html">Back to Maintenance Page</a>';
+                }
+            else {
+                echo 'Error Inserting Public User: ' . $stmt->error;
+            }
+
+            $stmt->close();
+                
+        $conn->close();
+        }
 
       ?>
 
