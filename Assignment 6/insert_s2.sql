@@ -1,0 +1,17 @@
+INSERT INTO Public (User_id, Interest, Team_supporting) VALUES
+('U051', 'Football, Tennis', 'T001'),
+('U053', 'Yoga, Cycling', NULL),
+('U054', 'Basketball, Swimming', 'T002'),
+('U056', 'Running, Gym', 'T003'),
+('U057', 'Tennis, Badminton', NULL),
+('U059', 'Football, Yoga', 'T004'),
+('U061', 'Swimming, Running', NULL),
+('U062', 'Basketball, Cycling', 'T005'),
+('U064', 'Yoga, Tennis', NULL),
+('U065', 'Football, Badminton', 'T006'),
+('U067', 'Running, Swimming', NULL),
+('U068', 'Cycling, Gym', 'T007'),
+('U070', 'Basketball, Yoga', NULL),
+('U071', 'Tennis, Football', 'T008'),
+('U073', 'Swimming, Gym', 'T009'),
+('U075', 'Yoga, Badminton', NULL);
