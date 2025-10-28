@@ -76,6 +76,8 @@
         echo '<a href="maintenance.html">Back to Maintenance Page</a>';
       } else {
         echo "<h3>Error: " . $stmt->error . "</h3>";
+        echo '<a href="a_InjRec.php">Back to Input Form</a><br>';
+        echo '<a href="maintenance.html">Back to Maintenance Page</a>';
       }
 
       $stmt->close();
