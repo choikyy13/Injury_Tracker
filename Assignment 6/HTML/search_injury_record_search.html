@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Med Staff Record Input | Injury Tracker</title>
+    <title> Injury Record  | Injury Tracker</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -12,7 +12,6 @@
   <!--navigation bar-->
   <div class="container">
     <nav>
-
       <!--left-->
       <div class="logo">
         <a href="index.html">
@@ -44,31 +43,20 @@
     </nav>
 
 
-    <?php
-      include 'db_connect.php';
-
-      $Staff_id = $_POST['Staff_id'];
-      $Specialization  = $_POST['Specialization'];
-      $Licence_number= $_POST['Licence_number'];
-
-      $stmt = $conn->prepare("INSERT INTO Medical_team (Staff_id, Specialization, Licence_number) VALUES (?, ?, ?)");
-      $stmt->bind_param("sss", $Staff_id,$Specialization,$Licence_number );
-
-
-      if ($stmt->execute()) {
-        echo "<h3>Med Staff info added successfully!</h3><br>";
-        echo "<p>Staff ID: <strong>" . $Staff_id . "</strong></p><br>";
-        echo '<a href="a_MedTeam.php">Back to Input Form</a><br>';
-        echo '<a href="maintenance.html">Back to Maintenance Page</a>';
-      } else {
-        echo "<h3>Error: " . $stmt->error . "</h3>";
-        echo '<a href="a_MedTeam.php">Back to Input Form</a><br>';
-        echo '<a href="maintenance.html">Back to Maintenance Page</a>';
-      }
-
-      $stmt->close();
-      $conn->close();
-    ?>
+    <h1>Search Injury Record</h1>
+    <form action="search_injury_record_result.php" method="get">
+        
+        <label>Injury Status:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="Injury_Status" value="Recovered" required> Recovered</label>
+            <label><input type="radio" name="Injury_Status" value="Under observation"> Under Observation</label>
+            <label><input type="radio" name="Injury_Status" value="Ongoing"> Ongoing</label>
+            <label><input type="radio" name="Injury_Status" value="Under treatment">Under treatment</label>
+        </div>
+        
+        Staff in charge: <input type="text" name="staff_in_charge">
+        <button type="submit">Search</button>
+    </form>    
 
 
   </div>
@@ -88,4 +76,5 @@
     </div>
   </footer>
 </body>
+
 </html>
