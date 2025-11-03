@@ -1,0 +1,129 @@
+<?php
+session_start();
+include 'db_connect.php';
+
+if (!isset($_SESSION['loggedin'])) {
+    header("Location: login.php");
+    exit;
+}
+
+$user_id = $_SESSION['User_id'];
+$stmt_check = $conn->prepare("SELECT * FROM Professional WHERE User_id = ?");
+$stmt_check->bind_param("s", $user_id);
+$stmt_check->execute();
+$result_check = $stmt_check->get_result();
+if ($result_check->num_rows == 0) {
+    session_unset();
+    session_destroy();
+    header("Location: login.php?error=Access+denied");
+    exit;
+}
+$stmt_check->close();
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public User Input | Injury Tracker</title>
+</head>
+
+
+<body>
+    <!--navigation bar-->
+  <div class="container">
+    <nav>
+
+      <!--left-->
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.jpg" alt="Logo" class="logo-img">    <!--if image not found, "logo"-->
+          <span class="logo-text">InjuryTracker</span>
+        </a>
+      </div>
+
+      <!--middle-->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Stat</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="login.php">Maintenance</a></li>
+        <li><a href="search.html">Search</a></li>
+      </ul>
+
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">🔍</button> <!-- Search icon -->
+      </div>
+
+      <!--right-->
+      <div class="buttons">
+        <a href="#" class="login"><span>Log in</span></a>
+        <a href="#" class="register">Register</a>
+      </div>
+    </nav>
+
+  
+    <?php
+      include 'db_connect.php';
+
+      $result = $conn->query("SELECT MAX(User_id) AS max_id FROM Public");
+      $row = $result->fetch_assoc();
+      $max_id = $row['max_id'];
+
+      if ($max_id) {
+        $num = (int)substr($max_id, 1);
+        $next_id = 'U' . str_pad($num + 1, 3, '0', STR_PAD_LEFT);
+      } else {
+        $next_id = 'U001';
+      }
+
+      $User_name = $_POST['User_name'];
+      $Email  = $_POST['Email'];
+      $Password = $_POST['Password'];
+
+      $stmt = $conn->prepare("INSERT INTO Users (User_id, User_name, Email, Password) VALUES (?, ?, ?,?)");
+      $stmt->bind_param("ssss", $next_id,$User_name,$Email,$Password );
+
+      if ($stmt->execute()) {
+        echo "<h3>User added successfully!</h3><br>";
+        echo "<p>User ID: <strong>" . $next_id . "</strong></p><br>";
+
+      } else {
+        echo "<h3>Error: " . $stmt->error . "</h3>";
+
+      }
+
+      echo '<a href="login.php">Login Again</a>';
+
+      session_unset();
+      session_destroy();
+
+      $stmt->close();
+      $conn->close();
+
+      ?>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Injury Tracker | Database Project</p>
+
+      <p class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="#">News</a> |
+        <a href="#">History</a>|
+        <a href="#">Reports</a> |
+        <a href="imprint.html">Imprint</a>
+      </p>
+
+    </div>
+  </footer>
+
+
+</body>
+</html>

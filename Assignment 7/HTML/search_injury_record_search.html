@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Injury Record | Injury Tracker</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+  <!--navigation bar-->
+  <div class="container">
+    <nav>
+      <!--left-->
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.jpg" alt="Logo" class="logo-img"> <!--if image not found, "logo"-->
+          <span class="logo-text">InjuryTracker</span>
+        </a>
+      </div>
+
+      <!--middle-->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Stat</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="login.php">Maintenance</a></li>
+        <li><a href="search.html">Search</a></li>
+      </ul>
+
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">🔍</button> <!-- Search icon -->
+      </div>
+
+      <!--right-->
+      <div class="buttons">
+        <a href="#" class="login"><span>Log in</span></a>
+        <a href="#" class="register">Register</a>
+      </div>
+    </nav>
+
+
+    <h1>Search Injury Record</h1>
+    <form action="search_injury_record_result.php" method="get">
+
+      <label>Injury Status:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Injury_Status" value="Recovered" required> Recovered</label>
+        <label><input type="radio" name="Injury_Status" value="Under observation"> Under Observation</label>
+        <label><input type="radio" name="Injury_Status" value="Ongoing"> Ongoing</label>
+        <label><input type="radio" name="Injury_Status" value="Under treatment">Under treatment</label>
+      </div>
+
+      Staff in charge: <input type="text" name="staff_in_charge">
+      <button type="submit">Search</button>
+    </form>
+
+
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Injury Tracker | Database Project</p>
+
+      <p class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="#">News</a> |
+        <a href="#">History</a>|
+        <a href="#">Reports</a> |
+        <a href="imprint.html">Imprint</a>
+      </p>
+
+    </div>
+  </footer>
+</body>
+
+</html>
