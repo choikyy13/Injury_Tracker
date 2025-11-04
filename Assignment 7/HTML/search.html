@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Search Form | Injury Tracker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <!--navigation bar-->
+    <div class="container">
+        <nav>
+
+            <!--left-->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.jpg" alt="Logo" class="logo-img"> <!--if image not found, "logo"-->
+                    <span class="logo-text">InjuryTracker</span>
+                </a>
+            </div>
+
+            <!--middle-->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Stat</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="login.php">Maintenance</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-button">🔍</button> <!-- Search icon -->
+            </div>
+
+            <!--right-->
+            <div class="buttons">
+                <a href="#" class="login"><span>Log in</span></a>
+                <a href="#" class="register">Register</a>
+            </div>
+        </nav>
+
+        <h2>Search Form</h2>
+        <ul>
+            <li><a href="s_1.html">Search User</a></li>
+            <br>
+            <strong>Purpose:</strong> To search for users' informations by their names, which may include either the
+            first or last
+            name.<br>
+            Testing inputs:<br>
+            --michael<br>
+            --ho<br><br>
+
+            <li><a href="s_2.html">Search Public User Interests</a></li>
+            <br>
+            <strong>Purpose:</strong> To search for public users' information by specific interests, listing user names
+            and emails
+            from the user entity.<br>
+            Testing inputs:<br>
+            --cycling<br>
+            --gym<br>
+            (Team supporting may be null)<br><br>
+
+            <li><a href="s_3.html">Search Coach Certificates</a></li>
+            <br>
+            <strong>Purpose:</strong> To search for staffs' informations by coach's certificate, listing their names
+            from the
+            staff entity.<br>
+            Testing inputs:<br>
+            --FIFA<br>
+            --Coaching<br>
+            (Team id may be null)<br><br>
+        </ul>
+
+
+    </div>
+
+</body>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 Injury Tracker | Database Project</p>
+
+        <p class="footer-links">
+            <a href="index.html">Home</a> |
+            <a href="#">News</a> |
+            <a href="#">History</a>|
+            <a href="#">Reports</a> |
+            <a href="imprint.html">Imprint</a>
+        </p>
+
+    </div>
+</footer>
+
+</html>
