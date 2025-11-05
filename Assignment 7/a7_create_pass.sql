@@ -81,3 +81,4 @@ SET Password = CASE User_id
   WHEN 'U075' THEN 'zC5t9LwK3pH8vM'
 END
 WHERE User_id BETWEEN 'U001' AND 'U075';
+

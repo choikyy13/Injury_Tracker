@@ -89,7 +89,7 @@ $conn->close();
 
     <p>
     <br>
-    *not all user have access to the maintenance page<br>
+    Only the admin has access to the maintenance page<br>
 
     </p>
 
