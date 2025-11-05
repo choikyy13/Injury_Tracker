@@ -71,7 +71,7 @@ $stmt_check->close();
     <?php
       include 'db_connect.php';
 
-      $result = $conn->query("SELECT MAX(User_id) AS max_id FROM Public");
+      $result = $conn->query("SELECT MAX(User_id) AS max_id FROM Users");
       $row = $result->fetch_assoc();
       $max_id = $row['max_id'];
 
