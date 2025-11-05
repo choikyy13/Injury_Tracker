@@ -3,12 +3,12 @@ session_start();
 include 'db_connect.php';
 
 if (!isset($_SESSION['loggedin'])) {
-    header("Location: login.php");
+    header("Location: login.php?error=Access+denied");
     exit;
 }
-
-$user_id = $_SESSION['User_id'];
-$stmt_check = $conn->prepare("SELECT * FROM Professional WHERE User_id = ?");
+/*
+$user_id = $_SESSION['User_name'];
+$stmt_check = $conn->prepare("SELECT * FROM Admin_User WHERE Username = ?");
 $stmt_check->bind_param("s", $user_id);
 $stmt_check->execute();
 $result_check = $stmt_check->get_result();
@@ -19,22 +19,15 @@ if ($result_check->num_rows == 0) {
     exit;
 }
 $stmt_check->close();
+*/
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team Input | Injury Tracker</title>
-</head>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
   <title>Injury Tracker</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
