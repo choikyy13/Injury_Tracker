@@ -5,23 +5,8 @@ if (!isset($_SESSION['loggedin'])) {
     header("Location: login.php");
     exit;
 }
-
-//block maintenance page, if user typing directly from url
-$user_id = $_SESSION['User_id'];
-$stmt = $conn->prepare("SELECT * FROM Professional WHERE User_id = ?");
-$stmt->bind_param("s", $user_id);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows == 0) {
-    session_unset();
-    session_destroy();
-    header("Location: login.php?error=Access+denied");
-    exit;
-}
-
-$conn->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

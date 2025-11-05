@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $User_name = $_POST['User_name'];
     $Password = $_POST['Password'];
 
-    $stmt = $conn->prepare("SELECT * FROM Users WHERE User_name = ?");
+    $stmt = $conn->prepare("SELECT * FROM Admin WHERE User_name = ?");
     $stmt->bind_param("s", $User_name);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($Password === $row['Password']) {
             $_SESSION['loggedin'] = true;
             $_SESSION['User_name'] = $User_name;
-            header("Location: login.php?error=Invalid+Password");
+            header("Location: maintenance.php");
             exit;
         } else {
             $error = "Invalid Password.";
@@ -90,19 +90,7 @@ $conn->close();
     <p>
     <br>
     *not all user have access to the maintenance page<br>
-    *only user in Professional table have access<br>
-    <br>
-    test input:<br><br>
-    user with access:<br>
-    U001 -- Emma Watson -- vD3q9RkH2aZ1pG<br>
-    U012 -- Ethan Brooks -- qB9r3HnD5tW8xC<br>
-    U024 -- Yvonne Choi -- hT9b4YqK6vP1xJ<br>
-    U031 -- William Scott -- tL6y1ZpW5nR8vJ<br>
-    <br>
-    user without access:<br>
-    U002 -- Bob Chan -- mK4x8LrT7uV2sJ<br>
-    U037 -- Laura Wong -- lW5b7DqV3tN1sC<br>
-    U049 -- Xenia Chan -- xT6b9KjL3pN5sC<br>
+
     </p>
 
 
