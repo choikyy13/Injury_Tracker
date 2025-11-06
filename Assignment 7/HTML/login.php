@@ -2,6 +2,7 @@
 session_start();
 include 'db_connect.php';
 
+/*
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $User_name = $_POST['User_name'];
     $Password = $_POST['Password'];
@@ -25,7 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error = "No user found.";
     }
 }
+*/
 $conn->close();
+
 ?>
 
 
@@ -84,6 +87,8 @@ $conn->close();
     <?php
     if (isset($_GET['error'])) {
       echo "<p style='color:red;'>" . htmlspecialchars($_GET['error']) . "</p>";
+    } elseif ($error){
+      echo "<p style='color:red;'>" . htmlspecialchars($error) . "</p>";
     }
     ?>
 

@@ -1,16 +1,34 @@
 <?php
+include 'db_connect.php';
+
+$username = "ad";
+$password = "ad";
+$hashedpassword = password_hash($password, PASSWORD_DEFAULT);
+
+$stmt = $conn->prepare("INSERT INTO Admin(User_name, Password) VALUES (?,?)");
+$stmt->bind_param("ss", $username, $hashedpassword);
+if ($stmt->execute()){
+    echo "Add first Administer";
+} else {
+    echo "failed: " . $stmt->error;
+}
+$stmt->close();
+$conn->close();
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Injury Record Input Form</title>
+  <title>Injury Tracker</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+
   <!--navigation bar-->
   <div class="container">
     <nav>
@@ -18,7 +36,7 @@
       <!--left-->
       <div class="logo">
         <a href="index.html">
-          <img src="img/logo.jpg" alt="Logo" class="logo-img">    <!--if image not found, "logo"-->
+          <img src="img/logo.jpg" alt="Logo" class="logo-img"> <!--if image not found, "logo"-->
           <span class="logo-text">InjuryTracker</span>
         </a>
       </div>
@@ -45,36 +63,28 @@
       </div>
     </nav>
 
+    
 
-    <h2>Team Input Form</h2>
-    <br>
-    <form action="r_Team.php" method="post">
-      <label for="Team_name">Team Name : </label>
-      <input type = "text" name = "Team_name" required placeholder="Enter the Team name">
-      <br>
+    <h2><a href="index.html">Back to Main Page</a></h2>
 
-      <label for="country">Country: </label>
-      <input type = "text" name = "Staff_name" required placeholder="Enter the country">
-
-      
-      <br><br>
-      <input type = "submit" value="Submit Form" />
-    </form>
 
   </div>
-  <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Injury Tracker | Database Project</p>
 
-      <p class="footer-links">
-        <a href="index.html">Home</a> |
-        <a href="#">News</a> |
-        <a href="#">History</a>|
-        <a href="#">Reports</a> |
-        <a href="imprint.html">Imprint</a>
-      </p>
-
-    </div>
-  </footer>
 </body>
+
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Injury Tracker | Database Project</p>
+
+    <p class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="#">News</a> |
+      <a href="#">History</a>|
+      <a href="#">Reports</a> |
+      <a href="imprint.html">Imprint</a>
+    </p>
+
+  </div>
+</footer>
+
 </html>

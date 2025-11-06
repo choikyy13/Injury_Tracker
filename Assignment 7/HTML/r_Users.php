@@ -3,10 +3,10 @@ session_start();
 include 'db_connect.php';
 
 if (!isset($_SESSION['loggedin'])) {
-    header("Location: login.php");
+    header("Location: login.php?error=Access+denied");
     exit;
 }
-
+/*
 $user_id = $_SESSION['User_id'];
 $stmt_check = $conn->prepare("SELECT * FROM Professional WHERE User_id = ?");
 $stmt_check->bind_param("s", $user_id);
@@ -19,6 +19,7 @@ if ($result_check->num_rows == 0) {
     exit;
 }
 $stmt_check->close();
+*/
 ?>
 
 
@@ -26,9 +27,9 @@ $stmt_check->close();
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Public User Input | Injury Tracker</title>
+  <title>Injury Tracker</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 
