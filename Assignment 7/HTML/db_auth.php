@@ -13,6 +13,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
+
+        if(password_verify($Password, $row['Password'])){
+            $_SESSION['loggedin'] = true;
+            $_SESSION['User_name'] = $row['User_name'];
+            header("Location: maintenance.php");
+            exit();
+        } else {
+            header("Location: login.php?error=" . urlencode("Invalid password."));
+            exit();
+        }
+    } else {
+        header("Location: login.php?error=" . urlencode("No user found with that username."));
+        exit();
+    }
+
+}
+/*
         if ($Password === $row['Password']) { 
             $_SESSION['loggedin'] = true;
             $_SESSION['User_name'] = $row['User_name'];
@@ -29,7 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: login.php?error=" . urlencode("No user found with that username."));
         exit();
     }
-}
+
+*/
+
 $conn->close();
 ?>
 

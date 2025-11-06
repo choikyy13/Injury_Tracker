@@ -1,32 +1,18 @@
 <?php
-session_start();
 include 'db_connect.php';
 
-/*
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $User_name = $_POST['User_name'];
-    $Password = $_POST['Password'];
+$username = "ad";
+$password = "ad";
+$hashedpassword = password_hash($password, PASSWORD_DEFAULT);
 
-    $stmt = $conn->prepare("SELECT * FROM Admin WHERE User_name = ?");
-    $stmt->bind_param("s", $User_name);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if ($Password === $row['Password']) {
-            $_SESSION['loggedin'] = true;
-            $_SESSION['User_name'] = $User_name;
-            header("Location: maintenance.php");
-            exit;
-        } else {
-            $error = "Invalid Password.";
-        }
-    } else {
-        $error = "No user found.";
-    }
+$stmt = $conn->prepare("INSERT INTO Admin(User_name, Password) VALUES (?,?)");
+$stmt->bind_param("ss", $username, $hashedpassword);
+if ($stmt->execute()){
+    echo "Add first Administer";
+} else {
+    echo "failed: " . $stmt->error;
 }
-*/
+$stmt->close();
 $conn->close();
 
 ?>
@@ -77,26 +63,9 @@ $conn->close();
       </div>
     </nav>
 
-    <h1>Login</h1>
-    <form action="db_auth.php" method="post">
-      Username: <input type="text" name="User_name" required><br>
-      Password: <input type="password" name="Password" required><br>
-      <input type="submit" value="Login">
-    </form>
+    
 
-    <?php
-    if (isset($_GET['error'])) {
-      echo "<p style='color:red;'>" . htmlspecialchars($_GET['error']) . "</p>";
-    } elseif ($error){
-      echo "<p style='color:red;'>" . htmlspecialchars($error) . "</p>";
-    }
-    ?>
-
-    <p>
-    <br>
-    Only the admin has access to the maintenance page<br>
-
-    </p>
+    <h2><a href="index.html">Back to Main Page</a></h2>
 
 
   </div>
