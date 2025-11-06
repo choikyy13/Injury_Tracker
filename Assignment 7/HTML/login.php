@@ -87,12 +87,12 @@ $conn->close();
     <?php
     if (isset($_GET['error'])) {
       echo "<p style='color:red;'>" . htmlspecialchars($_GET['error']) . "</p>";
-    } elseif ($error){
+    } /*elseif ($error){
       echo "<p style='color:red;'>" . htmlspecialchars($error) . "</p>";
-    }
+    }*/
     ?>
 
-    <p>
+    <p> 
     <br>
     Only the admin has access to the maintenance page<br>
 

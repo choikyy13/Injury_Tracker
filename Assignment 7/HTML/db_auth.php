@@ -29,6 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
 }
+
+//For plain text password storage
 /*
         if ($Password === $row['Password']) { 
             $_SESSION['loggedin'] = true;
