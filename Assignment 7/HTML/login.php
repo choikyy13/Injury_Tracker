@@ -2,7 +2,7 @@
 session_start();
 include 'db_connect.php';
 
-/*
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $User_name = $_POST['User_name'];
     $Password = $_POST['Password'];
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error = "No user found.";
     }
 }
-*/
+
 $conn->close();
 
 ?>
@@ -87,14 +87,18 @@ $conn->close();
     <?php
     if (isset($_GET['error'])) {
       echo "<p style='color:red;'>" . htmlspecialchars($_GET['error']) . "</p>";
-    } elseif ($error){
+    } /*elseif ($error){
       echo "<p style='color:red;'>" . htmlspecialchars($error) . "</p>";
-    }
+    }*/
     ?>
 
-    <p>
+    <p> 
     <br>
-    Only the admin has access to the maintenance page<br>
+    Only the admin has access to the maintenance page<br><br>
+    
+    testing input:<br>
+    username: admin<br>
+    password: admin123<br>
 
     </p>
 

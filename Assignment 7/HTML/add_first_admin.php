@@ -1,8 +1,8 @@
 <?php
 include 'db_connect.php';
 
-$username = "ad";
-$password = "ad";
+$username = "admin";
+$password = "admin123";
 $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
 
 $stmt = $conn->prepare("INSERT INTO Admin(User_name, Password) VALUES (?,?)");

@@ -6,20 +6,6 @@ if (!isset($_SESSION['loggedin'])) {
     header("Location: login.php?error=Access+denied");
     exit;
 }
-/*
-$user_id = $_SESSION['User_name'];
-$stmt_check = $conn->prepare("SELECT * FROM Admin_User WHERE Username = ?");
-$stmt_check->bind_param("s", $user_id);
-$stmt_check->execute();
-$result_check = $stmt_check->get_result();
-if ($result_check->num_rows == 0) {
-    session_unset();
-    session_destroy();
-    header("Location: login.php?error=Access+denied");
-    exit;
-}
-$stmt_check->close();
-*/
 ?>
 
 
