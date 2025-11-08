@@ -1,0 +1,172 @@
+[Mon Nov 03 22:42:54.167024 2025] [php7:notice] [pid 26869] [client 10.212.134.5:63184] PHP Notice:  Undefined index: User_name in /home/ycao/public_html/r_Users.php on line 61
+[Mon Nov 03 22:42:54.167053 2025] [php7:notice] [pid 26869] [client 10.212.134.5:63184] PHP Notice:  Undefined index: Email in /home/ycao/public_html/r_Users.php on line 62
+[Wed Nov 05 20:56:38.717941 2025] [php7:warn] [pid 26868] [client 10.212.134.2:60815] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/ycao/public_html/db_connect.php on line 7
+[Wed Nov 05 20:57:38.695593 2025] [php7:notice] [pid 19408] [client 10.212.134.2:61075] PHP Notice:  Undefined index: User_id in /home/ycao/public_html/db_auth.php on line 17, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 20:57:38.695714 2025] [php7:error] [pid 19408] [client 10.212.134.2:61075] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/ycao/public_html/db_auth.php:20\nStack trace:\n#0 {main}\n  thrown in /home/ycao/public_html/db_auth.php on line 20, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 20:57:56.430572 2025] [php7:notice] [pid 19407] [client 10.212.134.2:61165] PHP Notice:  Undefined index: User_id in /home/ycao/public_html/db_auth.php on line 17, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 20:57:56.430667 2025] [php7:error] [pid 19407] [client 10.212.134.2:61165] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/ycao/public_html/db_auth.php:20\nStack trace:\n#0 {main}\n  thrown in /home/ycao/public_html/db_auth.php on line 20, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:01:54.301909 2025] [php7:notice] [pid 26867] [client 10.212.134.2:62152] PHP Notice:  Undefined index: User_id in /home/ycao/public_html/db_auth.php on line 17, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:02:00.612217 2025] [php7:notice] [pid 19730] [client 10.212.134.2:62186] PHP Notice:  Undefined index: User_id in /home/ycao/public_html/db_auth.php on line 17, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied%3A+not+allowed+to+access+maintenance+page
+[Wed Nov 05 21:08:37.314411 2025] [php7:notice] [pid 15259] [client 10.212.134.2:63914] PHP Notice:  Undefined variable: user_id in /home/ycao/public_html/db_auth.php on line 50, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied%3A+not+allowed+to+access+maintenance+page
+[Wed Nov 05 21:09:44.328567 2025] [php7:notice] [pid 26869] [client 10.212.134.2:64207] PHP Notice:  Undefined index: User_id in /home/ycao/public_html/maintenance.php on line 10, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied
+[Wed Nov 05 21:11:27.861474 2025] [php7:notice] [pid 18935] [client 10.212.134.2:64703] PHP Notice:  Undefined variable: user_id in /home/ycao/public_html/db_auth.php on line 50, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied
+[Wed Nov 05 21:17:25.408617 2025] [php7:notice] [pid 18986] [client 10.212.134.2:49962] PHP Notice:  Undefined index: User_id in /home/ycao/public_html/maintenance.php on line 10, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:20:55.029389 2025] [php7:notice] [pid 26867] [client 10.212.134.2:50973] PHP Notice:  Undefined index: User_id in /home/ycao/public_html/maintenance.php on line 10, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied
+[Wed Nov 05 21:23:01.198547 2025] [php7:notice] [pid 15259] [client 10.212.134.2:51527] PHP Notice:  Undefined variable: _SESSION in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied
+[Wed Nov 05 21:23:01.198579 2025] [php7:notice] [pid 15259] [client 10.212.134.2:51527] PHP Notice:  Trying to access array offset on value of type null in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied
+[Wed Nov 05 21:23:01.198586 2025] [php7:notice] [pid 15259] [client 10.212.134.2:51527] PHP Notice:  Undefined variable: user_id in /home/ycao/public_html/maintenance.php on line 76, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied
+[Wed Nov 05 21:33:30.079210 2025] [php7:notice] [pid 18986] [client 10.212.134.2:54270] PHP Notice:  Undefined variable: _SESSION in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:33:30.079236 2025] [php7:notice] [pid 18986] [client 10.212.134.2:54270] PHP Notice:  Trying to access array offset on value of type null in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:33:30.079243 2025] [php7:notice] [pid 18986] [client 10.212.134.2:54270] PHP Notice:  Undefined variable: user_id in /home/ycao/public_html/maintenance.php on line 76, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:37:21.952063 2025] [php7:notice] [pid 19408] [client 10.212.134.2:55303] PHP Notice:  Undefined variable: _SESSION in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:37:21.952088 2025] [php7:notice] [pid 19408] [client 10.212.134.2:55303] PHP Notice:  Trying to access array offset on value of type null in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:37:21.952104 2025] [php7:notice] [pid 19408] [client 10.212.134.2:55303] PHP Notice:  Undefined variable: user_id in /home/ycao/public_html/maintenance.php on line 76, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:38:29.058461 2025] [php7:notice] [pid 15259] [client 10.212.134.2:55613] PHP Notice:  Undefined variable: _SESSION in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:38:29.058487 2025] [php7:notice] [pid 15259] [client 10.212.134.2:55613] PHP Notice:  Trying to access array offset on value of type null in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:38:29.058493 2025] [php7:notice] [pid 15259] [client 10.212.134.2:55613] PHP Notice:  Undefined variable: user_id in /home/ycao/public_html/maintenance.php on line 76, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:38:46.475966 2025] [php7:notice] [pid 26867] [client 10.212.134.2:55693] PHP Notice:  Undefined variable: _SESSION in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:38:46.475998 2025] [php7:notice] [pid 26867] [client 10.212.134.2:55693] PHP Notice:  Trying to access array offset on value of type null in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:38:46.476004 2025] [php7:notice] [pid 26867] [client 10.212.134.2:55693] PHP Notice:  Undefined variable: user_id in /home/ycao/public_html/maintenance.php on line 76, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:38:58.741598 2025] [php7:notice] [pid 26866] [client 10.212.134.2:55759] PHP Notice:  Undefined variable: _SESSION in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:38:58.741629 2025] [php7:notice] [pid 26866] [client 10.212.134.2:55759] PHP Notice:  Trying to access array offset on value of type null in /home/ycao/public_html/maintenance.php on line 75, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:38:58.741636 2025] [php7:notice] [pid 26866] [client 10.212.134.2:55759] PHP Notice:  Undefined variable: user_id in /home/ycao/public_html/maintenance.php on line 76, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:39:49.395453 2025] [php7:notice] [pid 26869] [client 10.212.134.2:55991] PHP Notice:  Undefined variable: user_id in /home/ycao/public_html/maintenance.php on line 77, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:39:51.870651 2025] [php7:notice] [pid 15259] [client 10.212.134.2:56002] PHP Notice:  Undefined variable: user_id in /home/ycao/public_html/maintenance.php on line 77, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:41:28.242780 2025] [php7:notice] [pid 26867] [client 10.212.134.2:56465] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 21:41:37.167972 2025] [php7:notice] [pid 19408] [client 10.212.134.2:56518] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 21:41:38.703297 2025] [php7:notice] [pid 19408] [client 10.212.134.2:56518] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 21:41:52.909002 2025] [php7:notice] [pid 26868] [client 10.212.134.2:56599] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 21:46:22.354273 2025] [php7:notice] [pid 26866] [client 10.212.134.2:57827] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 21:46:56.049730 2025] [php7:notice] [pid 19408] [client 10.212.134.2:58000] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 21:49:58.699872 2025] [php7:notice] [pid 19407] [client 10.212.134.2:58819] PHP Notice:  Undefined index: User_id in /home/ycao/public_html/r_Team.php on line 10
+[Wed Nov 05 21:49:58.790053 2025] [php7:notice] [pid 19407] [client 10.212.134.2:58819] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 21:50:34.559336 2025] [php7:notice] [pid 26867] [client 10.212.134.2:58981] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 21:50:48.768090 2025] [php7:notice] [pid 19408] [client 10.212.134.2:59058] PHP Notice:  Undefined index: User_id in /home/ycao/public_html/r_Users.php on line 10
+[Wed Nov 05 21:50:48.869643 2025] [php7:notice] [pid 19408] [client 10.212.134.2:59058] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 21:50:59.250568 2025] [php7:notice] [pid 19407] [client 10.212.134.2:59111] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 21:51:22.455559 2025] [php7:notice] [pid 26866] [client 10.212.134.2:59223] PHP Notice:  Undefined index: Country in /home/ycao/public_html/r_Team.php on line 89, referer: http://10.60.36.1/~ycao/a_Team.php
+[Wed Nov 05 21:51:24.404987 2025] [php7:notice] [pid 26866] [client 10.212.134.2:59223] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/r_Team.php
+[Wed Nov 05 22:01:42.004329 2025] [php7:notice] [pid 26866] [client 10.212.134.2:60506] PHP Notice:  Undefined index: uid in /home/ycao/public_html/sd_1.php on line 47
+[Wed Nov 05 22:01:42.004735 2025] [php7:notice] [pid 15259] [client 10.212.134.2:60509] PHP Notice:  Undefined index: search_value in /home/ycao/public_html/sr_3.php on line 56
+[Wed Nov 05 22:01:42.004867 2025] [php7:notice] [pid 19408] [client 10.212.134.2:60510] PHP Notice:  Undefined index: search_value in /home/ycao/public_html/sr_2.php on line 56
+[Wed Nov 05 22:01:42.005560 2025] [php7:notice] [pid 15259] [client 10.212.134.2:60509] PHP Notice:  session_start(): A session had already been started - ignoring in /home/ycao/public_html/sr_3.php on line 65
+[Wed Nov 05 22:01:42.005589 2025] [php7:notice] [pid 19408] [client 10.212.134.2:60510] PHP Notice:  session_start(): A session had already been started - ignoring in /home/ycao/public_html/sr_2.php on line 65
+[Wed Nov 05 22:01:42.030092 2025] [php7:notice] [pid 19407] [client 10.212.134.2:60511] PHP Notice:  Undefined index: search_value in /home/ycao/public_html/sr_1.php on line 56
+[Wed Nov 05 22:01:42.030659 2025] [php7:notice] [pid 19407] [client 10.212.134.2:60511] PHP Notice:  session_start(): A session had already been started - ignoring in /home/ycao/public_html/sr_1.php on line 65
+[Wed Nov 05 22:01:42.054758 2025] [php7:notice] [pid 15259] [client 10.212.134.2:60509] PHP Notice:  Undefined index: uid in /home/ycao/public_html/sd_2.php on line 47
+[Wed Nov 05 22:01:42.054838 2025] [php7:notice] [pid 26868] [client 10.212.134.2:60508] PHP Notice:  Undefined index: sid in /home/ycao/public_html/sd_3.php on line 47
+[Wed Nov 05 22:01:42.111342 2025] [php7:notice] [pid 19407] [client 10.212.134.2:60511] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:08:23.087168 2025] [php7:error] [pid 18935] [client 10.212.134.2:60709] script '/home/ycao/public_html/tr_Team.php' not found or unable to stat
+[Wed Nov 05 22:08:27.428282 2025] [php7:notice] [pid 15259] [client 10.212.134.2:60720] PHP Notice:  Undefined index: Team_name in /home/ycao/public_html/r_Team.php on line 88
+[Wed Nov 05 22:08:27.428308 2025] [php7:notice] [pid 15259] [client 10.212.134.2:60720] PHP Notice:  Undefined index: Country in /home/ycao/public_html/r_Team.php on line 89
+[Wed Nov 05 22:08:29.778466 2025] [php7:notice] [pid 15259] [client 10.212.134.2:60720] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/r_Team.php
+[Wed Nov 05 22:09:10.259643 2025] [php7:notice] [pid 26868] [client 10.212.134.2:60744] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:09:22.358188 2025] [php7:notice] [pid 26866] [client 10.212.134.2:60765] PHP Notice:  Undefined index: Team_name in /home/ycao/public_html/r_Team.php on line 88
+[Wed Nov 05 22:09:22.358207 2025] [php7:notice] [pid 26866] [client 10.212.134.2:60765] PHP Notice:  Undefined index: Country in /home/ycao/public_html/r_Team.php on line 89
+[Wed Nov 05 22:09:53.516532 2025] [php7:notice] [pid 26867] [client 10.212.134.2:60794] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:13:05.939956 2025] [php7:notice] [pid 15259] [client 10.212.134.2:60897] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:13:21.816202 2025] [php7:notice] [pid 26868] [client 10.212.134.2:60913] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:15:32.551684 2025] [php7:notice] [pid 19407] [client 10.212.134.2:61001] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:15:32.551715 2025] [php7:notice] [pid 19407] [client 10.212.134.2:61001] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:15:33.388820 2025] [php7:notice] [pid 19407] [client 10.212.134.2:61001] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:15:33.388840 2025] [php7:notice] [pid 19407] [client 10.212.134.2:61001] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:15:34.744699 2025] [php7:notice] [pid 19407] [client 10.212.134.2:61001] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:15:34.744720 2025] [php7:notice] [pid 19407] [client 10.212.134.2:61001] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:15:36.215079 2025] [php7:notice] [pid 19730] [client 10.212.134.2:61006] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:15:36.215109 2025] [php7:notice] [pid 19730] [client 10.212.134.2:61006] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:16:15.640023 2025] [php7:notice] [pid 26866] [client 10.212.134.2:61053] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:16:15.640042 2025] [php7:notice] [pid 26866] [client 10.212.134.2:61053] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:19:12.625235 2025] [php7:notice] [pid 19408] [client 10.212.134.2:61126] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/index.html
+[Wed Nov 05 22:19:12.625262 2025] [php7:notice] [pid 19408] [client 10.212.134.2:61126] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/index.html
+[Wed Nov 05 22:19:52.759579 2025] [php7:notice] [pid 15259] [client 10.212.134.2:61133] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:19:52.759612 2025] [php7:notice] [pid 15259] [client 10.212.134.2:61133] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:20:47.361445 2025] [php7:notice] [pid 19730] [client 10.212.134.2:61158] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/index.html
+[Wed Nov 05 22:20:47.361471 2025] [php7:notice] [pid 19730] [client 10.212.134.2:61158] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/index.html
+[Wed Nov 05 22:21:35.998427 2025] [php7:notice] [pid 18986] [client 10.212.134.2:61180] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/index.html
+[Wed Nov 05 22:21:35.998454 2025] [php7:notice] [pid 18986] [client 10.212.134.2:61180] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/index.html
+[Wed Nov 05 22:21:56.480495 2025] [php7:notice] [pid 19408] [client 10.212.134.2:61195] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:21:56.480522 2025] [php7:notice] [pid 19408] [client 10.212.134.2:61195] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:22:50.762475 2025] [php7:notice] [pid 26869] [client 10.212.134.2:61212] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:22:50.762505 2025] [php7:notice] [pid 26869] [client 10.212.134.2:61212] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:22:51.335115 2025] [php7:notice] [pid 26869] [client 10.212.134.2:61212] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:22:51.335134 2025] [php7:notice] [pid 26869] [client 10.212.134.2:61212] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:22:54.770624 2025] [php7:notice] [pid 26869] [client 10.212.134.2:61212] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:22:54.770654 2025] [php7:notice] [pid 26869] [client 10.212.134.2:61212] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:22:55.826682 2025] [php7:notice] [pid 26866] [client 10.212.134.2:61227] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 22:22:55.826706 2025] [php7:notice] [pid 26866] [client 10.212.134.2:61227] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 22:22:59.826077 2025] [php7:notice] [pid 26866] [client 10.212.134.2:61227] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:22:59.826101 2025] [php7:notice] [pid 26866] [client 10.212.134.2:61227] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:23:02.553897 2025] [php7:notice] [pid 18935] [client 10.212.134.2:61235] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:23:02.553925 2025] [php7:notice] [pid 18935] [client 10.212.134.2:61235] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:24:44.720796 2025] [php7:notice] [pid 26867] [client 10.212.134.2:61267] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:24:55.167127 2025] [php7:notice] [pid 19408] [client 10.212.134.2:61284] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:24:56.700058 2025] [php7:notice] [pid 26869] [client 10.212.134.2:61288] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:24:57.676028 2025] [php7:notice] [pid 26869] [client 10.212.134.2:61288] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied
+[Wed Nov 05 22:24:57.676048 2025] [php7:notice] [pid 26869] [client 10.212.134.2:61288] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied
+[Wed Nov 05 22:25:02.388888 2025] [php7:notice] [pid 19407] [client 10.212.134.2:61295] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:25:18.784655 2025] [php7:notice] [pid 18935] [client 10.212.134.2:61306] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:26:00.397013 2025] [php7:notice] [pid 15259] [client 10.212.134.2:61335] PHP Notice:  Undefined index: User_id in /home/ycao/public_html/r_Users.php on line 10
+[Wed Nov 05 22:26:00.502992 2025] [php7:notice] [pid 15259] [client 10.212.134.2:61335] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:26:10.550729 2025] [php7:notice] [pid 19407] [client 10.212.134.2:61346] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:26:10.550754 2025] [php7:notice] [pid 19407] [client 10.212.134.2:61346] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:30:26.789343 2025] [php7:notice] [pid 19730] [client 10.212.134.2:61441] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:30:26.789366 2025] [php7:notice] [pid 19730] [client 10.212.134.2:61441] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:31:01.779303 2025] [php7:notice] [pid 18935] [client 10.212.134.2:61456] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:31:01.779325 2025] [php7:notice] [pid 18935] [client 10.212.134.2:61456] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:31:08.270281 2025] [php7:notice] [pid 18986] [client 10.212.134.2:61465] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:31:08.270302 2025] [php7:notice] [pid 18986] [client 10.212.134.2:61465] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:31:15.678612 2025] [php7:notice] [pid 15259] [client 10.212.134.2:61474] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:31:15.678635 2025] [php7:notice] [pid 15259] [client 10.212.134.2:61474] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:31:17.545195 2025] [php7:notice] [pid 15259] [client 10.212.134.2:61474] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:31:17.545222 2025] [php7:notice] [pid 15259] [client 10.212.134.2:61474] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:31:40.208627 2025] [php7:notice] [pid 26869] [client 10.212.134.2:61485] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:32:42.738935 2025] [php7:notice] [pid 26868] [client 10.212.134.2:61507] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:32:45.449182 2025] [php7:notice] [pid 26868] [client 10.212.134.2:61507] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:32:45.449199 2025] [php7:notice] [pid 26868] [client 10.212.134.2:61507] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Wed Nov 05 22:33:32.838887 2025] [php7:notice] [pid 26866] [client 10.212.134.2:61535] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:37:32.879826 2025] [php7:notice] [pid 19730] [client 10.212.134.2:61657] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:37:36.517135 2025] [php7:notice] [pid 18986] [client 10.212.134.2:61662] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:38:05.808473 2025] [php7:notice] [pid 26867] [client 10.212.134.2:61683] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:38:09.617905 2025] [php7:notice] [pid 26867] [client 10.212.134.2:61683] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:38:16.387874 2025] [php7:notice] [pid 15259] [client 10.212.134.2:61692] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:38:19.023941 2025] [php7:notice] [pid 15259] [client 10.212.134.2:61692] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:38:30.068316 2025] [php7:notice] [pid 19407] [client 10.212.134.2:61699] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:38:46.457703 2025] [php7:notice] [pid 26866] [client 10.212.134.2:61710] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:38:56.168643 2025] [php7:notice] [pid 18935] [client 10.212.134.2:61721] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:39:03.118395 2025] [php7:notice] [pid 26867] [client 10.212.134.2:61726] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:39:11.479157 2025] [php7:notice] [pid 26869] [client 10.212.134.2:61733] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:40:19.809027 2025] [php7:notice] [pid 26868] [client 10.212.134.2:61754] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:40:26.119440 2025] [php7:notice] [pid 19730] [client 10.212.134.2:61760] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:40:32.118570 2025] [php7:notice] [pid 18986] [client 10.212.134.2:61769] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:40:37.447718 2025] [php7:notice] [pid 26867] [client 10.212.134.2:61776] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Wed Nov 05 22:57:25.561805 2025] [php7:notice] [pid 18986] [client 10.212.134.2:62184] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/a_InjTyp.php
+[Wed Nov 05 22:57:33.892176 2025] [php7:notice] [pid 26867] [client 10.212.134.2:62191] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied
+[Wed Nov 05 22:57:33.892203 2025] [php7:notice] [pid 26867] [client 10.212.134.2:62191] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied
+[Wed Nov 05 23:00:18.400046 2025] [php7:notice] [pid 19408] [client 10.212.134.2:62283] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/search.html
+[Wed Nov 05 23:00:18.400091 2025] [php7:notice] [pid 19408] [client 10.212.134.2:62283] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/search.html
+[Wed Nov 05 23:00:19.445858 2025] [php7:notice] [pid 19408] [client 10.212.134.2:62283] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/search.html
+[Wed Nov 05 23:00:19.445879 2025] [php7:notice] [pid 19408] [client 10.212.134.2:62283] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/search.html
+[Wed Nov 05 23:00:28.367326 2025] [php7:notice] [pid 19407] [client 10.212.134.2:62295] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/index.html
+[Wed Nov 05 23:00:28.367354 2025] [php7:notice] [pid 19407] [client 10.212.134.2:62295] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/index.html
+[Wed Nov 05 23:00:30.144740 2025] [php7:notice] [pid 19407] [client 10.212.134.2:62295] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 23:00:30.144763 2025] [php7:notice] [pid 19407] [client 10.212.134.2:62295] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 23:00:31.476896 2025] [php7:notice] [pid 19407] [client 10.212.134.2:62295] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/login.php
+[Wed Nov 05 23:00:31.476919 2025] [php7:notice] [pid 19407] [client 10.212.134.2:62295] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/login.php
+[Thu Nov 06 10:03:00.536156 2025] [php7:notice] [pid 18935] [client 10.212.134.19:58877] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85
+[Thu Nov 06 10:03:00.536182 2025] [php7:notice] [pid 18935] [client 10.212.134.19:58877] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87
+[Thu Nov 06 10:03:28.705239 2025] [php7:notice] [pid 15259] [client 10.212.134.19:58940] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 85, referer: http://10.60.36.1/~ycao/index.html
+[Thu Nov 06 10:03:28.705270 2025] [php7:notice] [pid 15259] [client 10.212.134.19:58940] PHP Notice:  Undefined index: error in /home/ycao/public_html/login.php on line 87, referer: http://10.60.36.1/~ycao/index.html
+[Thu Nov 06 10:12:54.837242 2025] [php7:notice] [pid 15259] [client 10.212.134.19:59226] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90
+[Thu Nov 06 10:20:04.905336 2025] [php7:notice] [pid 26868] [client 10.212.134.19:59542] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90, referer: http://10.60.36.1/~ycao/index.html
+[Thu Nov 06 11:20:01.515122 2025] [php7:notice] [pid 26473] [client 10.212.134.19:61183] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90, referer: http://10.60.36.1/~ycao/index.html
+[Thu Nov 06 11:47:27.862055 2025] [php7:error] [pid 26868] [client 10.212.134.7:62980] script '/home/ycao/public_html/a_medTeam.php' not found or unable to stat
+[Thu Nov 06 20:33:59.932251 2025] [php7:notice] [pid 18329] [client 10.212.134.4:55523] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90, referer: http://10.60.36.1/~ycao/
+[Thu Nov 06 21:04:39.707395 2025] [php7:notice] [pid 18329] [client 10.212.134.8:54710] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90
+[Thu Nov 06 21:12:01.488381 2025] [php7:notice] [pid 18311] [client 10.212.134.5:64327] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90, referer: http://10.60.36.1/~ycao/a_Athlete.php
+[Thu Nov 06 21:12:04.900716 2025] [php7:notice] [pid 18311] [client 10.212.134.5:64327] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90, referer: http://10.60.36.1/~ycao/a_Athlete.php
+[Thu Nov 06 21:13:00.437081 2025] [php7:notice] [pid 26186] [client 10.212.134.8:54783] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90
+[Thu Nov 06 21:13:31.498812 2025] [php7:notice] [pid 18329] [client 10.212.134.5:49667] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90, referer: http://10.60.36.1/~ycao/
+[Thu Nov 06 21:28:06.516166 2025] [php7:notice] [pid 17692] [client 10.212.134.8:55686] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90
+[Thu Nov 06 21:28:52.958239 2025] [php7:notice] [pid 26867] [client 10.212.134.8:62340] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90
+[Thu Nov 06 21:29:20.402300 2025] [php7:notice] [pid 26188] [client 10.212.134.8:54958] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90, referer: http://10.60.36.1/~ycao/login.php?error=Access+denied
+[Thu Nov 06 21:32:18.778319 2025] [php7:notice] [pid 18265] [client 10.212.134.8:55089] PHP Notice:  Undefined variable: error in /home/ycao/public_html/login.php on line 90
