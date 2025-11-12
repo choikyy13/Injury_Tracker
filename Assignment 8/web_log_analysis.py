@@ -31,7 +31,7 @@ def plot_timeline(timeline, title):
     plt.xlabel("Time")
     plt.ylabel("Count")
     plt.title(title)
-    
+    plt.legend()
     plt.tight_layout()
     plt.show()
 
@@ -137,4 +137,42 @@ plot_timeline(error_timeline, "Error Log Timeline")
 
 
 
+ip_events = defaultdict(list)
+browser_events = defaultdict(list)
 
+for page, events in timeline.items():
+    for t, ip, ua in events:
+        ip_events[ip].append(t)
+        browser_events[ua].append(t)
+
+
+plt.figure(figsize=(10,5))
+ips = list(ip_events.keys())
+
+for i, ip in enumerate(ips):
+    plt.scatter(ip_events[ip], [i]*len(ip_events[ip]), label = ip, s=10)
+
+plt.xlabel("Time")
+plt.ylabel("IP Address")
+plt.title("Access timeline by IP")
+plt.legend()
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.tight_layout()
+plt.show()
+
+
+
+plt.figure(figsize=(10, 6))
+browsers = list(browser_events.keys())
+
+for i, browser in enumerate(browsers):
+    plt.scatter(browser_events[browser], [i] * len(browser_events[browser]), label=browser, s=10)
+
+#plt.yticks(range(len(browsers)), [b[:40] + "..." if len(b) > 40 else b for b in browsers])
+plt.xlabel("Time")
+plt.ylabel("User Agent")
+plt.title("Access Timeline by Browser / User-Agent")
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.tight_layout()
+plt.legend(fontsize=6)
+plt.show()
