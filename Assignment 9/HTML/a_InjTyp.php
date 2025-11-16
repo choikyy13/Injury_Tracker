@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Injury Record Input Form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <!--navigation bar-->
+  <div class="container">
+    <nav>
+
+      <!--left-->
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.jpg" alt="Logo" class="logo-img">    <!--if image not found, "logo"-->
+          <span class="logo-text">InjuryTracker</span>
+        </a>
+      </div>
+
+      <!--middle-->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Stat</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="login.php">Maintenance</a></li>
+        <li><a href="search.html">Search</a></li>
+      </ul>
+
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">🔍</button> <!-- Search icon -->
+      </div>
+
+      <!--right-->
+      <div class="buttons">
+        <a href="#" class="login"><span>Log in</span></a>
+        <a href="#" class="register">Register</a>
+      </div>
+    </nav>
+
+
+    <h2>Injury Type Input Form</h2>
+    <br>
+    <form action="r_InjTyp.php" method="post">
+      <label for="Injury_name">Injury Name : </label>
+      <input type = "text" name = "Injury_name" required placeholder="Enter the injury name">
+      <br>
+
+        <label for="Body_part">Body Part: </label>
+        <select name="Body_part">
+            <option value="" selected>Select a body part (optional)</option>
+            <option value="Leg">Leg</option>
+            <option value="Ankle">Ankle</option>
+            <option value="Knee">Knee</option>
+            <option value="Shoulder">Shoulder</option>
+            <option value="Wrist">Wrist</option>
+            <option value="Back">Back</option>
+            <option value="Head">Head</option>
+            <option value="Elbow">Elbow</option>
+            <option value="Groin">Groin</option>
+            <option value="Neck">Neck</option>
+        </select>
+
+      
+      <br><br>
+      <input type = "submit" value="Submit Form" />
+    </form>
+
+  </div>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Injury Tracker | Database Project</p>
+
+      <p class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="#">News</a> |
+        <a href="#">History</a>|
+        <a href="#">Reports</a> |
+        <a href="imprint.html">Imprint</a>
+      </p>
+
+    </div>
+  </footer>
+</body>
+</html>

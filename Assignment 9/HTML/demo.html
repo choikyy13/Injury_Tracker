@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Autocomplete Demo</title>
+
+    <!-- jQuery + jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+        }
+        #search {
+            width: 300px;
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Autocomplete Demo (Static Version)</h1>
+
+    <label for="search">Search for a fruit:</label><br>
+    <input id="static_input" type="text" placeholder="Start typing...">
+
+    <script>
+        // Step 1: static list of words
+        var tags = [
+            "Apple",
+            "Banana",
+            "Orange",
+            "Grape",
+            "Pineapple",
+            "Strawberry",
+            "Watermelon",
+            "Mango",
+            "Blueberry",
+            "Peach"
+        ];
+
+        // Step 2: initialize autocomplete
+        $(function () {
+            $("#static_input").autocomplete({
+                source: tags
+            });
+        });
+    </script>
+
+
+    <br><br>
+    <label for="search">Search for a item:</label><br>
+    <input id="static_input_from_server" type="text" placeholder="Start typing...">
+
+    <script>
+        $(function () {
+            $.ajax({
+                url: "get_tags.php",   
+                method: "GET",
+                dataType: "json",
+                success: function (data) {
+                    $("#static_input_from_server").autocomplete({
+                        source: data 
+                    });
+                }
+            });
+        });
+    </script>
+
+    <br><br>
+    <label for="search">Search for a item:</label><br>
+    <input id="dynamic_callback" type="text" placeholder="Start typing...">
+
+    <script>
+        $("#dynamic_callback").autocomplete({
+            source: function(request, response) {
+                $.ajax({
+                    url: "get_tags.php",
+                    data: { q: request.term }, 
+                    dataType: "json",
+                    success: function(data) {
+                        response(data);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
