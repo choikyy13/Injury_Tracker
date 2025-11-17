@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Search Form | Injury Tracker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+
+    <!--navigation bar-->
+    <div class="container">
+        <nav>
+
+            <!--left-->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.jpg" alt="Logo" class="logo-img"> <!--if image not found, "logo"-->
+                    <span class="logo-text">InjuryTracker</span>
+                </a>
+            </div>
+
+            <!--middle-->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Stat</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="login.php">Maintenance</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-button">🔍</button> <!-- Search icon -->
+            </div>
+
+            <!--right-->
+            <div class="buttons">
+                <a href="#" class="login"><span>Log in</span></a>
+                <a href="#" class="register">Register</a>
+            </div>
+        </nav>
+
+        <h2> Search Form</h2>
+        <h4>(autocomplete using JQuery and Ajax)</h4>
+        <br>
+        <form action="sr_2.php" method="get">
+            <label for="search">Interest:</label>
+            <input type="text" id="autocompleteInterest" name="search">
+            <br>
+            <input type="submit" value="Submit Form" />
+        </form>
+        <script>
+            $(function () {
+                $("#autocompleteInterest").autocomplete({
+                    minLength: 1,
+                    source: function (request, response) {
+                        $.ajax({
+                            url: "fetchData.php",
+                            type: "POST",
+                            data: {
+                                search: request.term,
+                                type: "interest"
+                            },
+                            success: function (data) {
+                                const parsed = JSON.parse(data);
+                                response(Array.from(new Set(parsed.map(item => item.label))).map(label => ({ label: label, value: label }))); //distinct
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+
+        <br>
+        <a href="search.html">Back to Search Page</a><br>
+        <a href="index.html">Back to Home Page</a><br>
+    </div>
+
+</body>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 Injury Tracker | Database Project</p>
+
+        <p class="footer-links">
+            <a href="index.html">Home</a> |
+            <a href="#">News</a> |
+            <a href="#">History</a>|
+            <a href="#">Reports</a> |
+            <a href="imprint.html">Imprint</a>
+        </p>
+
+    </div>
+</footer>
+
+</html>
