@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Seach with autocomplete (demo) </title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+        }
+
+        #search {
+            width: 300px;
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Search (demo)</h1>
+
+    <form action="phpsearch.php" method="post">
+        <label for="autocomplete">Search the track events:</label>
+        <input type="text" id="autocomplete" name="search"><br>
+
+    </form>
+
+    <script>
+        // static 
+        var tags = [
+            "Sprint 100m",
+            "Sprint 200m",
+            "Sprint 400m",
+            "Run 800m",
+            "Run 1500m",
+            "Run 5000m",
+            "Run 10000m",
+            "Hurdles 110m",
+            "Hurdles 100m",
+            "Hurdles 400m",
+            "Relay 4x100m",
+            "Relay 4x400m",
+            "Marathon"
+        ];
+
+        $("#autocomplete").autocomplete({
+            source: function (request, response) {
+                var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(request.term), "i");
+                response($.grep(tags, function (item) {
+                    return matcher.test(item);
+                }));
+            }
+        });
+    </script>
+    <br>
+    test:
+    <br>
+    Sprint
+    <br>
+    Run
+    <br>
+    Hurdles
+    <br>
+    Relay
+    <br>
+    Marathon
+    <br>
+
+</body>
+
+</html>
