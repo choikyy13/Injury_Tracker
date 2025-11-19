@@ -26,7 +26,7 @@
 
       <!--left-->
       <div class="logo">
-        <a href="index.php">
+        <a href="index.html">
           <img src="img/logo.jpg" alt="Logo" class="logo-img"> <!--if image not found, "logo"-->
           <span class="logo-text">InjuryTracker</span>
         </a>
@@ -34,7 +34,7 @@
 
       <!--middle-->
       <ul>
-        <li><a href="index.php">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="#">News</a></li>
         <li><a href="#">Stat</a></li>
         <li><a href="#">Reports</a></li>

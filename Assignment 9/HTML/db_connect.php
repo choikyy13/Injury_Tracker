@@ -2,7 +2,7 @@
     $servername = "";
     $username = "";
     $password = "";
-    $db_name = "Injury_Tracker";
+    $db_name = "";
 
     $conn = new mysqli($servername,$username,$password,$db_name);
 
